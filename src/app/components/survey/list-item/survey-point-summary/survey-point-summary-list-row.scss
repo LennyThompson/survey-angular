@@ -1,0 +1,52 @@
+@import "./../../variables.scss";
+
+:host {
+    font-family: $surveyFont;
+    &.even >div{
+        background-color: $tableEvenColour;
+    }
+    &.odd >div{
+        background-color: $tableOddColour;
+    }
+
+    &.first >div {
+        border-top: $tableBorderLine;
+    }
+
+    div {
+        border-bottom: $tableBorderLine;
+        border-left: $tableBorderLine;
+        border-color: $tableBorderColour;
+
+        .survey-point-summary-info {
+            border-right: $tableBorderLine;
+            border-color: $tableBorderColour;
+            text-align: center;
+        }
+
+        i {
+            &.icon-minus {
+                color: $collapseRowColour;
+                cursor: pointer;
+            }
+            &.icon-plus {
+                color: $expandRowColour;
+                cursor: pointer;
+            }
+        }
+
+        .survey-point-summary-actions {
+            i {
+                &.icon-pencil {
+                    color: $editItemColour;
+                }
+                &.icon-trash {
+                    color: $deleteItemColour;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

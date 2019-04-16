@@ -1,0 +1,9 @@
+<!-- ****THIS IS A CODE GENERATED FILE DO NOT EDIT**** -->
+<!-- Generated on Thu Nov 22 20:29:21 AEST 2018 -->
+
+<div fxLayout="row">
+    <mat-select placeholder="SurveyImage" [(ngModel)]="value">
+        <mat-option *ngFor="let type of SurveyImage" [value]="type" >{{ type.Description }}</mat-option>
+    </mat-select>
+    <i class="icon-plus" (click)="onAddNewSurveyImage()"></i>
+</div>

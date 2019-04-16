@@ -1,0 +1,52 @@
+[
+  {
+    "ID": 1,
+    "Name": "Test Survey",
+    "created": "2017-01-01T14:45:26.000Z",
+    "updated": "2017-01-01T14:45:26.000Z",
+    "Description": "Testing...",
+    "proj": {
+      "projID": 1,
+      "projName": "UTM XX"
+    },
+    "trav": [
+      {
+        "travID": 1,
+        "travName": "New Traverse",
+        "travUpdated": "2017-01-01T14:45:26.000Z",
+        "ptTravStart": "First Point",
+        "ptTravEnd": "Second Point"
+      }
+    ],
+    "ptSurv": [
+      {
+        "ptID": 1,
+        "ptName": "First Point",
+        "ptX": 1000.0,
+        "ptY": 2000.0,
+        "ptZ": 500.0
+      },
+      {
+        "ptID": 2,
+        "ptName": "Second Point",
+        "ptX": 1100.0,
+        "ptY": 2000.0,
+        "ptZ": 550.0
+      },
+      {
+        "ptID": 3,
+        "ptName": "Trav 1",
+        "ptX": 1000.0,
+        "ptY": 2100.0,
+        "ptZ": 510.0
+      },
+      {
+        "ptID": 4,
+        "ptName": "Trav 2",
+        "ptX": 1100.0,
+        "ptY": 2100.0,
+        "ptZ": 530.0
+      }
+    ]
+  }
+]

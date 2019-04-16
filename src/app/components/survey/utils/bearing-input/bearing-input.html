@@ -1,0 +1,44 @@
+<div class="mat-form-field-wrapper">
+    <div class="mat-input-table">
+        <div class="mat-form-field-infix">
+            <label>Bearing:</label>
+            <div fxLayout="row">
+                <input #bearing class="form-control degrees-input"
+                       mdInput
+                       debounce [delay]="300"
+                       type="text" maxlength="3"
+                       [(ngModel)]="degrees"
+                       (keypress)="onKeypress($event, 'degrees')"
+                >
+                <span>º</span>
+                <input #bearing class="form-control minutes-input"
+                       mdInput
+                       debounce [delay]="300"
+                       type="text" maxlength="2" pattern="[0-9]{2}"
+                       [(ngModel)]="minutes"
+                       (keypress)="onKeypress($event, 'minutes')"
+                >
+                <span>'</span>
+                <input #bearing class="form-control seconds-input"
+                       mdInput
+                       debounce [delay]="300"
+                       type="text" maxlength="2" pattern="[0-9]{2}"
+                       [(ngModel)]="seconds"
+                       (keypress)="onKeypress($event, 'seconds')"
+                >
+                <span>"</span>
+                <span class="mat-form-field-labelwrapper">
+                   <label class="mat-form-field-label"
+                          [class.mat-float]="_canPlaceholderFloat"
+                          [class.mat-accent]="dividerColor == 'accent'"
+                          [class.mat-warn]="dividerColor == 'warn'"
+                   >
+                  <ng-content select="md-placeholder, mat-placeholder"></ng-content>
+                  {{placeholder}}
+                </label>
+              </span>
+            </div>
+        </div>
+    </div>
+    <div class="mat-form-field-underline"><span class="mat-form-field-ripple"></span></div>
+</div>

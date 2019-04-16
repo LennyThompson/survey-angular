@@ -1,0 +1,62 @@
+@import "./../../variables.scss";
+
+:host {
+    font-family: $surveyFont;
+    &.even >div{
+        background-color: $tableEvenColour;
+    }
+    &.odd >div{
+        background-color: $tableOddColour;
+    }
+
+    &.first >div {
+        border-top: $tableBorderLine;
+    }
+
+    div {
+        border-bottom: $tableBorderLine;
+        border-left: $tableBorderLine;
+        border-color: $tableBorderColour;
+
+        .traverse-measurement-summary-info {
+            border-right: $tableBorderLine;
+            border-color: $tableBorderColour;
+            text-align: center;
+            &.survey-distance {
+                text-align: right;
+
+            }
+            &.survey-bearing {
+                text-align: right;
+
+            }
+
+
+        }
+
+        i {
+            &.icon-minus {
+                color: $collapseRowColour;
+                cursor: pointer;
+            }
+            &.icon-plus {
+                color: $expandRowColour;
+                cursor: pointer;
+            }
+        }
+
+        .traverse-measurement-summary-actions {
+            i {
+                &.icon-pencil {
+                    color: $editItemColour;
+                }
+                &.icon-trash {
+                    color: $deleteItemColour;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+bearing-input {
+  .degrees-input {
+    width: 30px;
+    :focus {
+      background-color: lightgray;
+    }
+  }
+  .minutes-input {
+    width: 20px;
+    :focus {
+      background-color: lightgray;
+    }
+  }
+  .seconds-input {
+    width: 20px;
+    :focus {
+      background-color: lightgray;
+    }
+  }
+}

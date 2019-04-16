@@ -1,0 +1,43 @@
+<!-- ****THIS IS A CODE GENERATED FILE DO NOT EDIT**** -->
+<!-- Generated on Thu Nov 22 20:32:23 AEST 2018 -->
+<form>
+    <div class="flex-container form-group" id="measurement" fxLayout="row">
+        <mat-form-field fxFlex="25">
+            <label >HorizDistance:</label>
+            <input class="form-control"
+                mdInput placeholder="{{SurveyMeasurement.HorizDistance | horizDistancePlaceholder}}"
+                step="10" type="number"
+                [(ngModel)]="SurveyMeasurement.HorizDistance"
+                id="horiz" name="HorizDistance">
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="25">
+            <label >VertDistance:</label>
+            <input class="form-control"
+                mdInput placeholder="{{SurveyMeasurement.VertDistance | vertDistancePlaceholder}}"
+                step="10" type="number"
+                [(ngModel)]="SurveyMeasurement.VertDistance"
+                id="vert" name="VertDistance">
+        </mat-form-field>
+
+
+    <bearing-input  fxFlex="25"
+        [(ngModel)]="SurveyMeasurement.Bearing" placeholder="{{SurveyMeasurement.Bearing | bearingPlaceholder}}"
+        id="bearing" name="Bearing">
+    </bearing-input>
+
+
+    </div>
+    <div class="flex-container form-group" id="to_from" fxLayout="row">
+            <label>PointFrom</label>
+            <survey-point-select [(ngModel)]="SurveyMeasurement.PointFrom" name="PointFrom"></survey-point-select>
+
+
+            <label>PointTo</label>
+            <survey-point-select [(ngModel)]="SurveyMeasurement.PointTo" name="PointTo"></survey-point-select>
+
+
+    </div>
+
+</form>

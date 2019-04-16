@@ -1,0 +1,31 @@
+@import "./../variables.scss";
+@import "../../../../assets/icons/survey-icons.css";
+
+survey-details {
+  .survey-point-header {
+    background-color: $tableHeaderColour;
+    border-color: $tableBorderColour;
+    border-bottom: $tableBorderLine;
+    border-top: $tableBorderLine;
+    border-right: $tableBorderLine;
+    & div {
+      text-align: center;
+      border-color: $tableBorderColour;
+      border-left: $tableBorderLine;
+    }
+  }
+  .add-new-point {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    background-color: gray;
+    i {
+      color: black;
+    }
+    & :hover {
+      cursor: pointer;
+    }
+
+  }
+
+}

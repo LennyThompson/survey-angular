@@ -1,0 +1,29 @@
+@import "./../../variables.scss";
+:host {
+  font-family: $surveyFont;
+  & div .survey-summary-list-header {
+    background-color: $tableHeaderColour;
+    border-color: $tableBorderColour;
+    border-bottom: $tableBorderLine;
+    border-top: $tableBorderLine;
+    border-right: $tableBorderLine;
+    & div {
+      text-align: center;
+      border-color: $tableBorderColour;
+      border-left: $tableBorderLine;
+    }
+  }
+
+  .survey-summary-list-actions {
+    i {
+        .icon-plus {
+            color: $addItemColour;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+  }
+
+}

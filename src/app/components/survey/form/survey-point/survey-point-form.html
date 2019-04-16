@@ -1,0 +1,69 @@
+<!-- ****THIS IS A CODE GENERATED FILE DO NOT EDIT**** -->
+<!-- Generated on Thu Nov 22 20:32:23 AEST 2018 -->
+<form>
+    <div class="flex-container form-group" id="coord" fxLayout="row">
+        <mat-form-field fxFlex="25">
+            <label >X:</label>
+            <input class="form-control"
+                mdInput 
+                step="10" type="number"
+                [(ngModel)]="SurveyPoint.X"
+                id="x" name="X">
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="25">
+            <label >Y:</label>
+            <input class="form-control"
+                mdInput 
+                step="10" type="number"
+                [(ngModel)]="SurveyPoint.Y"
+                id="y" name="Y">
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="25">
+            <label >Z:</label>
+            <input class="form-control"
+                mdInput 
+                step="10" type="number"
+                [(ngModel)]="SurveyPoint.Z"
+                id="z" name="Z">
+        </mat-form-field>
+
+
+    </div>
+    <div class="flex-container form-group" id="desc" fxLayout="row">
+        <mat-form-field fxFlex="25">
+            <label >Name:</label>
+            <input class="form-control"
+                mdInput 
+                type="text"
+                [(ngModel)]="SurveyPoint.Name"
+                id="name" name="Name">
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="25">
+            <label >Description:</label>
+            <input class="form-control"
+                mdInput 
+                type="text"
+                [(ngModel)]="SurveyPoint.Description"
+                id="desc" name="Description">
+        </mat-form-field>
+
+
+    </div>
+    <div class="flex-container form-group" id="type" fxLayout="row">
+            <label>PointType</label>
+            <survey-point-type-select [(ngModel)]="SurveyPoint.PointType" name="PointType"></survey-point-type-select>
+
+
+            <label>Reference</label>
+            <survey-reference-select [(ngModel)]="SurveyPoint.Reference" name="Reference"></survey-reference-select>
+
+
+    </div>
+
+</form>

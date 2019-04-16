@@ -1,0 +1,98 @@
+<!-- ****THIS IS A CODE GENERATED FILE DO NOT EDIT**** -->
+<!-- Generated on Thu Nov 22 21:03:25 AEST 2018 -->
+<div fxLayout="column">
+    <div fxLayout="row">
+        <div fxFlex="5%">
+            <i [class.icon-minus]="isExpanded" [class.icon-plus]="!isExpanded" (click)="onExpand()"></i>
+        </div>
+        <div class="survey-summary-info" fxFlex="20%" >{{SurveySummary.ID}}</div>
+        <div class="survey-summary-info" fxFlex="20%" >{{SurveySummary.Name}}</div>
+        <div class="survey-summary-info" fxFlex="20%" >{{SurveySummary.Description}}</div>
+        <div class="survey-summary-info" fxFlex="20%" >{{SurveySummary.Proj.ProjName}}</div>
+        <div class="survey-summary-info" fxFlex="20%" >{{SurveySummary.Updated | date: 'medium'}}</div>
+
+        <div class="flex-item survey-summary-actions" fxFlex="20%" >
+            <i class="icon-pencil" (click)="onEdit()"></i>
+            <i class="icon-trash" (click)="onDelete()"></i>
+        </div>
+
+    </div>
+    <div *ngIf="isExpanded">
+        <div class="survey-summary-proj-list-header" fxLayout="row">
+            <div fxFlex="5%" ></div>
+            <div class="survey-summary-proj-header-info" fxFlex="20%" >Actions</div>
+        </div>
+        <div
+            fxLayout="row"
+            *ngFor="let Proj of SurveySummary.Proj; let odd=odd; let even=even; let index=index"
+            [ngClass]="{odd: odd, even: even, first: index===0 }"
+            >
+                <div fxFlex="5%" ></div>
+                <div class="flex-item survey-summary-proj-actions" fxFlex="20%" >
+                    <i class="icon-pencil" (click)="onEditSurveySummaryProj(Proj)"></i>
+                    <i class="icon-trash" (click)="onDeleteSurveySummaryProj(Proj)"></i>
+                </div>
+        </div>
+        <div class="survey-summary-proj-add-item" fxLayout="row">
+            <div class="flex-item" fxFlex="5%"></div>
+            <div class="flex-item survey-summary-proj-add-item" fxFlex="30%" >
+                <i class="icon-plus" (click)="onAddSurveySummaryProj()"></i>
+            </div>
+        </div>
+        <div class="survey-summary-travs-list-header" fxLayout="row">
+            <div fxFlex="5%" ></div>
+            <div class="survey-summary-travs-header-info" fxFlex="20" >TravID</div>
+            <div class="survey-summary-travs-header-info" fxFlex="20" >TravName</div>
+            <div class="survey-summary-travs-header-info" fxFlex="20" >PtTravStart</div>
+            <div class="survey-summary-travs-header-info" fxFlex="20" >PtTravEnd</div>
+            <div class="survey-summary-travs-header-info" fxFlex="20" >TravUpdated</div>
+
+            <div class="survey-summary-travs-header-info" fxFlex="20%" >Actions</div>
+        </div>
+        <div
+            fxLayout="row"
+            *ngFor="let Travs of SurveySummary.Travs; let odd=odd; let even=even; let index=index"
+            [ngClass]="{odd: odd, even: even, first: index===0 }"
+            >
+                <div fxFlex="5%" ></div>
+                <div class="survey-summary-travs-info" fxFlex="20%" >{{Travs.TravID}}</div>
+                <div class="survey-summary-travs-info" fxFlex="20%" >{{Travs.TravName}}</div>
+                <div class="survey-summary-travs-info" fxFlex="20%" >{{Travs.PtTravStart}}</div>
+                <div class="survey-summary-travs-info" fxFlex="20%" >{{Travs.PtTravEnd}}</div>
+                <div class="survey-summary-travs-info" fxFlex="20%" >{{Travs.TravUpdated | date: 'medium'}}</div>
+
+                <div class="flex-item survey-summary-travs-actions" fxFlex="20%" >
+                    <i class="icon-pencil" (click)="onEditSurveySummaryTravs(Travs)"></i>
+                    <i class="icon-trash" (click)="onDeleteSurveySummaryTravs(Travs)"></i>
+                </div>
+        </div>
+        <div class="survey-summary-travs-add-item" fxLayout="row">
+            <div class="flex-item" fxFlex="5%"></div>
+            <div class="flex-item survey-summary-travs-add-item" fxFlex="30%" >
+                <i class="icon-plus" (click)="onAddSurveySummaryTravs()"></i>
+            </div>
+        </div>
+        <div class="survey-summary-pt-survs-list-header" fxLayout="row">
+            <div fxFlex="5%" ></div>
+            <div class="survey-summary-pt-survs-header-info" fxFlex="20%" >Actions</div>
+        </div>
+        <div
+            fxLayout="row"
+            *ngFor="let PtSurvs of SurveySummary.PtSurvs; let odd=odd; let even=even; let index=index"
+            [ngClass]="{odd: odd, even: even, first: index===0 }"
+            >
+                <div fxFlex="5%" ></div>
+                <div class="flex-item survey-summary-pt-survs-actions" fxFlex="20%" >
+                    <i class="icon-pencil" (click)="onEditSurveySummaryPtSurvs(PtSurvs)"></i>
+                    <i class="icon-trash" (click)="onDeleteSurveySummaryPtSurvs(PtSurvs)"></i>
+                </div>
+        </div>
+        <div class="survey-summary-pt-survs-add-item" fxLayout="row">
+            <div class="flex-item" fxFlex="5%"></div>
+            <div class="flex-item survey-summary-pt-survs-add-item" fxFlex="30%" >
+                <i class="icon-plus" (click)="onAddSurveySummaryPtSurvs()"></i>
+            </div>
+        </div>
+
+    </div>
+</div>

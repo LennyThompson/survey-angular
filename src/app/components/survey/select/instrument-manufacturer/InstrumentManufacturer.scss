@@ -1,0 +1,15 @@
+@import "./../../variables.scss";
+
+:host {
+    font-family: $surveyFont;
+    mat-select {
+    }
+    i {
+        .icon-plus {
+            color: $addItemColour;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

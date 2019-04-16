@@ -1,0 +1,19 @@
+@import "./../../../variables.scss";
+
+:host {
+    font-family: $surveyFont;
+    mat-dialog-actions {
+        i {
+            &:hover {
+                cursor: pointer;
+            }
+            &.icon-ok {
+                color: $okBtnColour;
+            }
+            &.icon-cancel {
+                color: $cancelBtnColour;
+            }
+            padding: 2px;
+        }
+  }
+}
